@@ -2,4 +2,4 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-export const environment = process.env.NODE_ENV;
+export const dir = process.env.DIR;

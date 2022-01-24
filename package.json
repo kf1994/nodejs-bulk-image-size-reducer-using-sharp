@@ -2,9 +2,9 @@
   "name": "nodejs-bulk-image-size-reducer-using-sharp",
   "version": "1.0.0",
   "description": "Bulk image size reducer using sharp",
-  "main": "server.js",
+  "main": "init.js",
   "scripts": {
-    "start": "npm run build && node build/server.js",
+    "start": "npm run build && node build/init.js",
     "dev": "nodemon",
     "build": "rimraf ./build && tsc"
   },
