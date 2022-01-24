@@ -1,5 +1,6 @@
-import { readdirSync, lstatSync } from "fs";
+import { readdirSync, lstatSync, readFileSync } from "fs";
 import { resolve, join, extname } from "path";
+import sharp from "sharp";
 
 import createLogger from "../config/Logger";
 
@@ -26,7 +27,14 @@ const reducer = async (dir: string) => {
 			}
 		} else {
 			if (IMG_EXT.includes(extname(contentPath))) {
-				logger.info(`Processing ${contentPath}`);
+				const image = readFileSync(contentPath);
+
+				await sharp(image)
+					.jpeg({
+						quality: 35,
+						chromaSubsampling: "4:4:4",
+					})
+					.toFile(contentPath);
 			} else {
 				logger.warn(`Skipping ${contentPath}`);
 			}
