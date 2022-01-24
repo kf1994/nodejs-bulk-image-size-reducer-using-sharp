@@ -1,4 +1,4 @@
-import { dir } from "./config";
+import { dir, quality, saveAsSeparate } from "./config";
 import createLogger from "./config/Logger";
 import reducer from "./core/reducer";
 
@@ -8,12 +8,15 @@ const __init__ = async () => {
     /**
      * Check for required variables
      */
+    let saveAs = false;
     if (!dir) throw "Please provide a valid directory in .env";
+    if (saveAsSeparate && saveAsSeparate.toString().toLowerCase() === 'true') saveAs = true;
+
     /**
      * Initializing
      */
     logger.info("Initializing!");
-    await reducer(dir);
+    await reducer(dir, quality, saveAs);
 };
 
 __init__()
