@@ -4,6 +4,7 @@
   "description": "Bulk image size reducer using sharp",
   "main": "server.js",
   "scripts": {
+    "start": "npm run build && node build/server.js",
     "dev": "nodemon",
     "build": "rimraf ./build && tsc"
   },
