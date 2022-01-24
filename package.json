@@ -19,7 +19,8 @@
     "bunyan": "^1.8.15",
     "bunyan-format": "^0.2.1",
     "dotenv": "8.2.0",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
     "@types/bunyan": "^1.8.8",
@@ -27,6 +28,7 @@
     "@types/concurrently": "5.2.1",
     "@types/eslint": "7.2.6",
     "@types/node": "14.14.25",
+    "@types/sharp": "^0.29.5",
     "@typescript-eslint/eslint-plugin": "4.14.2",
     "@typescript-eslint/parser": "4.14.2",
     "concurrently": "6.0.2",
